@@ -51,7 +51,7 @@ add_filter('pre_set_site_transient_update_themes', 'check_for_theme_updates');
 
 // Adicionar informações adicionais sobre o tema
 function theme_api_check($false, $action, $response) {
-    if ($action === 'theme_information' && isset($response->slug) && $response->slug === 'azulsolar') {
+    if ($action === 'theme_information' && isset($response->slug) && $response->slug === 'lipagpt') {
         $github_url = 'https://api.github.com/repos/manuseiro/lipagpt/releases/latest';
         $request_args = array(
             'headers' => array(
