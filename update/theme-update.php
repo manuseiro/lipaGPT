@@ -71,16 +71,16 @@ function theme_api_check($false, $action, $response) {
         $release_data = json_decode(wp_remote_retrieve_body($response));
         if (!empty($release_data)) {
             $response = (object) array(
-                'slug' => 'azulsolar',
-                'name' => 'Azul Solar',
+                'slug' => 'lipagpt',
+                'name' => 'LipaGPT',
                 'version' => $release_data->tag_name,
-                'author' => 'Autor do Tema',
+                'author' => 'Manuseiro',
                 'requires' => '5.0', // Versão mínima do WordPress
                 'tested' => '5.9', // Última versão do WordPress testada
                 'requires_php' => '7.0', // Versão mínima do PHP
                 'download_link' => $release_data->zipball_url,
                 'sections' => array(
-                    'description' => 'Descrição do Tema.',
+                    'description' => 'Teste de Tema',
                     'changelog' => 'Notas da versão do tema.',
                 ),
             );
